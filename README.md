@@ -35,12 +35,43 @@ Before using this project you will need a Firebase database and a Google Cloud p
 
 # Installation
 
-* Download the Spring application and go to src/main/java/resources
-* Add a "serviceAccount.json" with the downloaded service account.
+## Google Authentication
 
-## Upload to Google Cloud
+For google authentication for the project to work you need an OAuth Client ID.
 
-//TODO
+* Go to [Google APIs](https://console.developers.google.com/apis/credential) and open the crededntials tab.
+* Create a new client ID and set up your Google App Engine URL as an Authorized redirect URL:
+*Example: http://your-app-engine-url/login/oauth2/code/google*
+* Make sure to include the last part.
+* Download the credentials
+
+
+Upload the project to Google App Engine in one of the following ways.
+
+1) Locally:
+* Download the "Server" folder and upload it directly to your app engine's storage.
+* Add the serviceAccount.json to the **/resources** folder
+* Create an *application.properties* file in **/resources** and add the Google Client ID credentials:
+
+*spring.security.oauth2.client.registration.google.client-id=__client-id__
+spring.security.oauth2.client.registration.google.client-secret=__secret-key__*
+
+* Once done, change directory to the server folder and go to the App Engine power shell and run: 
+```bash
+  mvn spring-boot:run
+```
+```bash
+  gcloud app deploy
+```
+2) Through github
+* Go to the Google App Engine power shell and write
+```bash
+git clone https://github.com/ispirovjr/Onlympiad2020.git
+```
+**the rest of the steps are the same
+
+After that the project should be avalable at the URL.
+Note: It is reccomended to change the app.yaml instance_class to F2.
 
 ## Before running
 Before opening the application at least three firebase collections need to be created - "hospitals", "users" and "audit".
