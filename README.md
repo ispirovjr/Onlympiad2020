@@ -35,11 +35,14 @@ Before using this project you will need a Firebase database and a Google Cloud p
 
 # Installation
 
+* Download the Spring application and go to src/main/java/resources
+* Add a "serviceAccount.json" with the downloaded service account.
+
+## Upload to Google Cloud
+
 //TODO
 
-# Usage
-
-Before opening the application at least two firebase collections need to be created - "hospitals", "users" and "audit".
+Before opening the application at least three firebase collections need to be created - "hospitals", "users" and "audit".
 
 * Hospitals
   * At least the names of the **departments** of the hospitals need to be added as documents.
@@ -60,6 +63,8 @@ Before opening the application at least two firebase collections need to be crea
 * Audit
   * This collection may be left empty as the program will generate the rest.
   * __It still has to be created even if left blank__
+
+# Usage
   
 Once the the Spring application is up the following links are of importance:
 
