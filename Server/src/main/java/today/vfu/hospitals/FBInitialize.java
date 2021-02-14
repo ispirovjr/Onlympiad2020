@@ -17,11 +17,18 @@ public class FBInitialize {
      */
     @PostConstruct
     public void initialize() throws Exception {
-        InputStream serviceAccount = FBInitialize.class.getResourceAsStream("/serviceAccount.json");
-        FirebaseOptions options = new FirebaseOptions.Builder()
-                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .build();
-        FirebaseApp.initializeApp(options);
+
+            InputStream serviceAccount = FBInitialize.class.getResourceAsStream
+                    ("/serviceAccount.json");
+            if (serviceAccount==null){
+                System.err.println("Error: serviceAccount.json not found in " +
+                        "resources folder");
+                System.exit(3);
+            }
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                    .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+                    .build();
+            FirebaseApp.initializeApp(options);
 
     }
 }
