@@ -41,6 +41,7 @@ For google authentication for the project to work you need an OAuth Client ID.
 
 * Go to [Google APIs](https://console.developers.google.com/apis/credential) and open the crededntials tab.
 * Create a new client ID and set up your Google App Engine URL as an Authorized redirect URL:
+
 *Example: http://your-app-engine-url/login/oauth2/code/google*
 * Make sure to include the last part.
 * Download the credentials
@@ -68,7 +69,7 @@ spring.security.oauth2.client.registration.google.client-secret=__secret-key__*
 ```bash
 git clone https://github.com/ispirovjr/Onlympiad2020.git
 ```
-**the rest of the steps are the same
+*the rest of the steps are the same*
 
 After that the project should be avalable at the URL.
 Note: It is reccomended to change the app.yaml instance_class to F2.
