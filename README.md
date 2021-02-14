@@ -42,6 +42,7 @@ Before using this project you will need a Firebase database and a Google Cloud p
 
 //TODO
 
+## Before running
 Before opening the application at least three firebase collections need to be created - "hospitals", "users" and "audit".
 
 * Hospitals
