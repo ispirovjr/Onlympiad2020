@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Test</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.full.min.js"> </script>
+  </head>
+  <body>
+    <header>
+      <h1>Audit</h1>
+     
+    </header>
+    <section id="Audit">
+      <h2>Recent Changes Page {{pageNum}}</h2>
+      <a href="../../../Admin/index.html">Log in</a>
+      <ul>
+        <h3 v-for="(change, index) in changes">
+          <li>On {{convertedDate(change.dateInMils)}} at {{convertedTime(change.dateInMils)}} {{change.changedDepartament}} had the following change(s): 
+            <h4 v-if="change.oldState.freebeds!=change.newState.freebeds">
+              Free beds: {{change.oldState.freebeds}} --> {{change.newState.freebeds}}      <label :style="[change.newState.freebeds>change.oldState.freebeds ? {'color':'green'} : {'color':'red'}]">({{change.newState.freebeds-change.oldState.freebeds}})</label>
+            </h4>
+            <h4 v-if="change.oldState.occupied!=change.newState.occupied">
+              Occupied beds: {{change.oldState.occupied}} --> {{change.newState.occupied}}   <label :style="[change.newState.occupied>change.oldState.occupied ? {'color':'green'} : {'color':'red'}]">({{change.newState.occupied-change.oldState.occupied}})</label>
+            </h4>
+            <h4 v-if="change.oldState.total!=change.newState.total">
+              Total beds: {{change.oldState.total}} --> {{change.newState.total}}   <label :style="[change.newState.total>change.oldState.total ? {'color':'green'} : {'color':'red'}]">({{change.newState.total-change.oldState.total}})</label>
+            </h4>
+            {{setOldChange(index)}}
+            <h4 v-if="change.userChanging!=null">
+             Change made by {{change.userChanging}}
+            </h4>
+          
+            <h2 v-if="checkIfDiffDay" style="color:blue;margin-left: 0px;width: 35rem;height: 20px; "></h2>
+            
+          </li>  
+          
+        
+         </h3> 
+      </ul>
+      
+      <input type="number" v-on:input="setNumberOfChangesTemp" v-on:keyup.enter="confirmNumberOfChanges" v-bind:value="clearer"/>  Alterations to list, currently {{numberOfChanges}}
+      <br>
+   
+      <button v-on:click="lastPage"> Prev Page</button>
+      <button v-on:click="nextPage"> Next Page</button>
+      
+      
+    </section>
+  </body>
+</html>

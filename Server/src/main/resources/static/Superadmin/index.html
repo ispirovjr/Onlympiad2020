@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Test</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.full.min.js"> </script>
+  </head>
+  <body>
+    <header>
+      <h1>Super Administrator Portal</h1>
+      <a href="../User/index.html">To User Portal</a>
+    </header>
+    <section id="AdminStatus">
+      <h2>{{hospitalName}} Status:</h2>
+      <ul>
+        <button v-on:click="changeHos(-1)">Prev</button>
+        <button v-on:click="changeHos(1)">Next</button>
+        <h3 v-for="(department, index) in departments">Department   -   {{department.name}}: 
+          <li>Total Beds: {{department.total}}
+            <input type="text" v-on:input="setChanger" v-on:keyup.enter="setTotal(index)" v-bind:value="clearer"/>
+            <button v-on:click="recalculate(index)">Recalculate Free Beds</button>
+           </li>
+          
+          <li>Occupied Beds: {{department.occupied}}
+            <input type="text" v-on:input="setChanger" v-on:keyup.enter="setOccupied(index)" v-bind:value="clearer"/>
+            <button v-on:click="freeBed(index)">Free a bed</button>
+          </li>
+         
+          <li>Free Beds: {{department.freebeds}}
+            <input type="text" v-on:input="setChanger" v-on:keyup.enter="setFree(index)" v-bind:value="clearer"/>
+            <button v-on:click="occupyBed(index)">Occupy a bed</button>
+         </li>
+          <li>Department Type: {{typeAsString(department.type)}}
+            <button v-on:click="postHospital(index)">Update Information</button>
+          </li>
+    
+        
+        </h3>
+      </ul>
+      
+      
+     
+     
+      
+      
+    </section>
+  </body>
+</html>
