@@ -230,7 +230,6 @@ public class HospitalController {
                 Department oldDep = dbFirestore.collection("hospitals")
                         .document(department.getName()).get().get().toObject
                                 (Department.class);
-
                 Audit audit = new Audit(oldDep, department, userService
                         .getCurrentUser().getEmail());
                 auditService.uploadAudit(audit);
@@ -269,8 +268,6 @@ public class HospitalController {
                                                        num, @PathVariable
             (value = "starting") Integer startingFrom) {
 
-        System.out.println("Recieved: " + num + " " + startingFrom);
-
         boolean isAuthorized = userService.isInDataBase();
 
         ArrayList<Audit> audits = new ArrayList<>();
@@ -286,7 +283,7 @@ public class HospitalController {
 
 
             for (DocumentSnapshot document : i) {
-                Audit audit = null;
+                Audit audit;
                 if (document.exists()) {
                     audit = document.toObject(Audit.class);
                     audits.add(audit);

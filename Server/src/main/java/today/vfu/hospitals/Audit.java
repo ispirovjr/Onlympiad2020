@@ -63,5 +63,8 @@ public class Audit {
         return changedDepartament;
     }
 
+    public String getuserChanging(){
+        return userChanging;
+    }
 
 }

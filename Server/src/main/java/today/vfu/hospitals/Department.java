@@ -97,6 +97,14 @@ public class Department {
     public String getHospital() {
         return hospital;
     }
+
+    /**
+     * Returns the type of department this one is.
+     * A chart can be seen in TypeIDReturn
+     */
+    public int getType() {
+        return type;
+    }
 }
 
 
