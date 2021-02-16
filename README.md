@@ -39,13 +39,14 @@ Before using this project you will need a Firebase database and a Google Cloud p
 
 For google authentication for the project to work you need an OAuth Client ID.
 
-* Go to [Google APIs](https://console.developers.google.com/apis/credential) and open the crededntials tab.
+* Go to [Google APIs](https://console.developers.google.com/apis/credential) and open the credentials tab.
 * Create a new client ID and set up your Google App Engine URL as an Authorized redirect URL:
 
 *Example: http://your-app-engine-url/login/oauth2/code/google*
 * Make sure to include the last part.
 * Download the credentials
 
+## Cloud Upload
 
 Upload the project to Google App Engine in one of the following ways.
 
