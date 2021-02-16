@@ -55,8 +55,9 @@ Upload the project to Google App Engine in one of the following ways.
 * Add the serviceAccount.json to the **/resources** folder
 * Create an *application.properties* file in **/resources** and add the Google Client ID credentials:
 
-*spring.security.oauth2.client.registration.google.client-id=__client-id__
-spring.security.oauth2.client.registration.google.client-secret=__secret-key__*
+*spring.security.oauth2.client.registration.google.client-id=__client-id__*
+
+*spring.security.oauth2.client.registration.google.client-secret=__secret-key__*
 
 * Once done, change directory to the server folder and go to the App Engine power shell and run: 
 ```bash
@@ -73,6 +74,7 @@ git clone https://github.com/ispirovjr/Onlympiad2020.git
 *the rest of the steps are the same*
 
 After that the project should be avalable at the URL.
+
 Note: It is reccomended to change the app.yaml instance_class to F2.
 
 ## Before running
