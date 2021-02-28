@@ -34,7 +34,7 @@ const app = Vue.createApp({
         },
 
         reloadInformation() {
-            hospitals = [];
+            this.hospitals = [];
             fetch("/avaliableHospitals/", {
                 "method": "GET",
                 "headers": {

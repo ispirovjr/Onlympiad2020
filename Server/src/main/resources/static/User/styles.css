@@ -1,20 +1,39 @@
-* {
+*{
   box-sizing: border-box;
 }
 
 html {
   font-family: 'Jost', sans-serif;
+
 }
 
 body {
   margin: 0;
+  background-image: url(hospital.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+background: #e5e5e5;
+}
+body::-webkit-scrollbar-thumb {
+   background: linear-gradient(to bottom, #015a7a , #019ac3);
+  }
+
+
 header {
+  margin-top: 0.4rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   padding: 0.5rem;
-  background-color: #880017;
+  background-image: linear-gradient(to right, #015a7a , #019ac3);
   color: white;
+  font-family: 'Jost', sans-serif;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -24,7 +43,6 @@ section {
   max-width: 40rem;
   margin: auto;
 }
-
 
 
 .container {
@@ -40,49 +58,99 @@ a{
   font-family: 'Jost', 'Times New Roman', Times, serif;
 }
 
+.link{
+  display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #BB86FC;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 200ms ease;
+    width:100%;
+    justify-content: flex-end;
+    margin-top: -5.4rem;
+    margin-left: -1.6rem;
+}
+
+.link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary)
+}
+
+.profile{
+  width: 70px;
+  display: flex; 
+  align-items: right;
+}
+
+.p{
+  padding-right: 1rem;
+  color: #a8d456;
+  font-family: 'Jost', sans-serif; 
+  font-size: 1.2rem;
+}
+
 button {
+  display: flex;
+  justify-content: center;
   font: inherit;
-  border: 1px solid #88005b;
-  background-color: #88005b;
+  border: 1px solid #a8d456;
+  background-color: #a8d456;
   color: white;
-  padding: 1rem 2rem;
   border-radius: 12px;
-  margin: 1rem;
-  width: 12rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 13rem;
   cursor: pointer;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+  font-size: 1rem;
+
+}
+
+input{
+  width: 8rem;
 }
 
 button:focus {
   outline: none;
+  border: 1px solid #a8d456;
+  transition: 1.3s;
 }
 
 h2{
-  border: 1px solid #88005b;
-  background-color: #88005b;
+  border: 1px solid #a8d456;
   color: white;
-  width: 12rem;
+   width: 32rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-}
-
-h3{
-  background-color: #922d8de0;
-  color: white;
+  background: rgba(168, 212, 86, 0.8)
 }
 
 ul{
-  background-color: #922d8de0;
+  border: 1px solid #008876;
+  color: white;
+  background: rgba(0,116,136, 0.6);
+/*  display: flex; */
+  justify-content: center;
+
 }
 
 li{
   margin-left: 30px;
 }
+input{
+  border-radius: 0.4rem;
+  border-color: #ffffff;
+}
 
-button:hover,
-button:active {
-  background-color: #af0a78;
-  border-color: #af0a78;
+button:hover {
+  background-color: #9bcd3d ;
+  border-color: #9bcd3d ;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+}
+
+button:active{
+  border: 0.5px #b3d96c;
+  background-color: #b3d96c;
+  transition: 0s;
 }
 
 button:disabled {
@@ -103,3 +171,18 @@ button:disabled {
   margin: 0.5rem 0;
 }
 
+.log--player {
+  color: #7700ff;
+}
+
+.log--monster {
+  color: #da8d00;
+}
+
+.log--damage {
+  color: red;
+}
+
+.log--heal {
+  color: green;
+}

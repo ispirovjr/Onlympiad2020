@@ -31,8 +31,6 @@ const app = Vue.createApp({
 
     methods: {
 
-
-
         convertedDate: function (milisec) {
             var date = new Date(milisec);
             return date.toLocaleDateString("en-GB");
