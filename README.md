@@ -1,6 +1,5 @@
 # Hospital Management System
 
-For english translation see below. It will be posted eventually.
 
 # About the project
 
