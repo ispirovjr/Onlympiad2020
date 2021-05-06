@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url(hospital.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+background: #e5e5e5;
+}
+body::-webkit-scrollbar-thumb {
+   background: linear-gradient(to bottom, #015a7a , #019ac3);
+  }
+	header {
+  bottom: 0;
+  margin-top: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, #015a7a , #019ac3);
+  color: white;
+  font-family: 'Jost', sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+.lin {
+  display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.link{
+  display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #90ee90;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 200ms ease;
+    width:100%;
+    justify-content: flex-end;
+    margin-top: -5.4rem;
+    margin-left: -1.6rem;
+}
+section {
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+}
+.profile{
+  width: 80px;
+  height: auto;
+  display: flex; 
+  align-items: right;}
+ 
+ p {
+  display: flex;
+  justify-content: start;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+.container {
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 12px;
+}
+
+a{
+  font: inherit;
+  font-family: 'Jost', 'Times New Roman', Times, serif;
+}
+
+.lin {
+  color: #90ee90;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 200ms ease;
+    width:100%;
+    display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0.4rem;
+}
+.lin:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary)
+}
+
+}
+
+.p{
+  padding-right: 1rem;
+  color: #a8d456;
+  font-family: 'Jost', sans-serif; 
+  font-size: 1.2rem;
+}
+
+button {
+  font: inherit;
+  border: 1px solid #a8d456;
+  background-color: #a8d456;
+  color: white;
+  border-radius: 12px;
+  margin: 1rem;
+  width: 13rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+  font-size: 1rem;
+}
+
+input{
+  width: 8rem;
+}
+
+button:focus {
+  outline: none;
+  border: 1px solid #a8d456;
+  transition: 1.3s;
+}
+
+h2{
+  border: 1px solid #a8d456;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  background: rgba(168, 212, 86, 0.8)
+}
+
+ul{
+  border: 1px solid #008876;
+  color: white;
+  background: rgba(0,116,136, 0.6);
+}
+
+li{
+  margin-left: 15px;
+  list-style-type: none;
+  padding: 0;
+}
+input{
+  border-radius: 0.4rem;
+  border-color: #ffffff;
+}
+
+button:hover {
+  background-color: #9bcd3d ;
+  border-color: #9bcd3d ;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+}
+
+button:active{
+  border: 0.5px #b3d96c;
+  background-color: #b3d96c;
+  transition: 0s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  box-shadow: none;
+  color: #3f3f3f;
+  cursor: not-allowed;
+}
+
+#log ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#log li {
+  margin: 0.5rem 0;
+}
+
+.log--player {
+  color: #7700ff;
+}
+
+.log--monster {
+  color: #da8d00;
+}
+
+.log--damage {
+  color: red;
+}
+
+.log--heal {
+  color: green;
+}
+.p {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+.a2 {
+font-size: 18px;
+display: inline-block;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+p {
+  font-size: 25px;
+}
+h3 {
+  font-size: 30px;
+}
